@@ -100,7 +100,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="{{ route('detail', $item->id) }}"
                                     class="btn btn-md btn-info">Detail</a>
-                                    <small class="text-body-secondary">{{ $item->user->name }} |
+                                    {{-- <small class="text-body-secondary">{{ $item->user->name }} | --}}
 
                                     <span class="fw-bold">{{ $item->kategori->nama_kategori }}</span></small>
                             </div>

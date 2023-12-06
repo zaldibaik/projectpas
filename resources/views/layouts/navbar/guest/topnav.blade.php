@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md shadow-sm ">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+            {{ config('app.name', 'PAS') }}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -14,12 +14,6 @@
             <ul class="navbar-nav ms-auto align-items-md-center">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
                 </li>
                 <!-- Authentication Links -->
                 @guest
@@ -60,3 +54,4 @@
         </div>
     </div>
 </nav>
+
