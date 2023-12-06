@@ -19,7 +19,7 @@
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item ms-lg-5 ms-md-3">
-                            <a class="btn btn-primary w-md-0 w-100" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            <a class="btn w-md-0 w-100" href="{{ route('login') }}">{{ __('Login') }}</a>
                         </li>
                     @endif
 

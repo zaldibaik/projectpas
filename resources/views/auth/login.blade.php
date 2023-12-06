@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="container col-xl-7 col-xxl-9 px-4 py-6">
         <div class="row  py-5">
             <div class="col-md-10 mx-auto col-lg-5">
                 <div class="card">
@@ -9,7 +9,7 @@
                         <form class="p-4 p-md-5" method="POST" action="{{ route('login') }}">
                             @csrf
                             <h3>{{ __('Login') }}</h3>
-                            <div class="form-floating mb-3">
+                            <div class="form-floating mb-2">
                                 <input type="email" class="form-control @error('email') is-invalid @enderror"
                                     name="email" id="floatingInput" value="{{ old('email') }}"
                                     placeholder="name@example.com" autocomplete="email" autofocus>
@@ -46,6 +46,8 @@
                                     </a>
                                 @endif
                             </small>
+
+                            <a href="">Register</a>
                         </form>
                     </div>
                 </div>
