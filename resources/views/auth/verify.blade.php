@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('navbar.auth.navbar')
 
 @section('content')
 <div class="container">

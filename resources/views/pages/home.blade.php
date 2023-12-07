@@ -85,29 +85,29 @@
   </button>
 </div>
 </div>
-
-
     <div class="container mt-3">
-        <div class="row">
-            @foreach ($allBerita as $item)
-                <div class="col-lg-4 col-md-6">
-                    <div class="card ">
-                        <img src="{{ asset('img/gambar/' . $item->gambar) }}" class="bd-placeholder-img card-img-top"
-                            alt="">
-                        <div class="card-body">
-                            <div class="card-title h5 fw-bold">{{ Str::limit($item->judul, 25, '...') }}</div>
-                            <p class="card-text">{!! Str::words($item->isi, 30, '...') !!}</p>
+    @foreach ($allBerita as $item)
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col-lg-4 col-md-6">
+    <div class="card">
+      <img src="{{ asset('img/gambar/' . $item->gambar) }}" class="card-img-top" alt="...">
+      <div class="card-body">
+          <span class="fw-bold">{{ $item->kategori->nama_kategori }}</span></small>
+        <h5 class="card-title py-2">{{ Str::limit($item->judul, 25, '...') }}</h5>
+        <p class="card-text">{!! Str::words($item->isi, 30, '...') !!}</p>
+
                             <div class="d-flex justify-content-between align-items-center">
                                 <a href="{{ route('detail', $item->id) }}"
                                     class="btn btn-md btn-info">Detail</a>
                                     {{-- <small class="text-body-secondary">{{ $item->user->name }} | --}}
 
-                                    <span class="fw-bold">{{ $item->kategori->nama_kategori }}</span></small>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
+                            @endforeach
     </div>
+  </div>
+</div>
+     </div>
+</div>
+
+    @include('layouts.footer.guest.footer') 
 @endsection

@@ -1,15 +1,16 @@
 @include('layouts.frame.head')
 
 <body>
+<header class="site-header sticky-top py-1">
     <div id="app">
-        @include('components.theme')
+
         @auth
             <main class="d-flex flex-nowrap">
                 @include('layouts.navbar.auth.sidenav')
-                @include('layouts.navbar.auth.topnav')
                 @yield('content')
             </main>
         @endauth
+        @include('components.theme')
 
         @guest
             @if (in_array(request()->route()->getName(),
@@ -28,6 +29,7 @@
     </div>
 
     @include('layouts.frame.foot')
+</header>
 </body>
 
 </html>
